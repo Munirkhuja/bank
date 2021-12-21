@@ -27,6 +27,7 @@ const (
 )
 type Payment struct {
 	ID uint
+	AccountID int64
 	Amount Money
 	Category Category
 	Status Status
@@ -35,4 +36,10 @@ type PaymentSource struct {
 	Type string // 'card'
 	Number string // номер вида '5058 xxxx xxxx 8888'
 	Balance Money // баланс в дирамах
+}
+type Phone string
+type Account struct {
+	ID int64
+	Phone Phone
+	Balance Money
 }
